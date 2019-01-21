@@ -52,6 +52,8 @@ middleware -a core concept of expressJS, receives incoming request that are funn
 ********** On Express ***********
 next() = only use !!in-place-of!! sending a response to a request, never along with.
 
+req.body = extracts data that comes in from forms, must be parsed with "body-parser"
+
 'app' is an instance of express() objects
 
 app.use = takes in a path and a function, funstion runs when that path has a request matches the path in argument
@@ -67,3 +69,6 @@ app.listen() = replaces below, sets our server ... no need to require http when 
 // server.listen(port, () =>{
 //   console.log('server is running on port 5000')
 // })
+
+********** On body-parser ***********
+parses data coming that are type 'body', lie those coming from input forms, there are other type of parsers for other type of incoming data.
