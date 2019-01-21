@@ -43,3 +43,27 @@ Example (which you don't need to understand yet - we'll cover this later in the 
 npm install --save express-session
 // In code file (e.g. app.js)
 const sessions = require('express-session');
+
+
+********** On middleware ***********
+middleware -a core concept of expressJS, receives incoming request that are funneled through functions provided by express
+
+
+********** On Express ***********
+next() = only use !!in-place-of!! sending a response to a request, never along with.
+
+'app' is an instance of express() objects
+
+app.use = takes in a path and a function, funstion runs when that path has a request matches the path in argument
+
+app.listen() = replaces below, sets our server ... no need to require http when using this express method.
+// // select a port of choice
+// const port = 5000;
+//
+// // set up of server
+// const server = http.createServer (app);
+//
+// // listens for server, logs when server is running
+// server.listen(port, () =>{
+//   console.log('server is running on port 5000')
+// })
