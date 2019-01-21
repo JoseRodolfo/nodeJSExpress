@@ -7,20 +7,25 @@ const app = express()
 
 app.use((req, res, next )=>{
   console.log('in the middleware')
-  next() //this allows for middleware to contiue to next middle ware in line
+  res.send('<h1> hello from express </h1>')
+  // next() //we should call "next()" if we dont send a response, otherwise the request will die here and not continue to the next middlware
 })
 
 app.use((req, res, next )=>{
   console.log('second middleware')
 })
 
-// select a port of choice
-const port = 5000;
+// app.listen(), replaces all code commented below it, note there is no need to require http neither.
+app.listen(5000)
 
-// set up of server
-const server = http.createServer (app);
 
-// listens for server, logs when server is running
-server.listen(port, () =>{
-  console.log('server is running on port 5000')
-})
+// // select a port of choice
+// const port = 5000;
+//
+// // set up of server
+// const server = http.createServer (app);
+//
+// // listens for server, logs when server is running
+// server.listen(port, () =>{
+//   console.log('server is running on port 5000')
+// })
