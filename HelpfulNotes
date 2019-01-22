@@ -72,3 +72,7 @@ app.listen() = replaces below, sets our server ... no need to require http when 
 
 ********** On body-parser ***********
 parses data coming that are type 'body', lie those coming from input forms, there are other type of parsers for other type of incoming data.
+
+********** On express.Router() ***********
+router is inherited with expressJS
+exports routes with module exports and import into app.js for cleaner code
