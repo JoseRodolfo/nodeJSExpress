@@ -9,15 +9,13 @@ const app = express();
 // parses all requst/respones below
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use(adminRoutes)
+app.use('/admin', adminRoutes)
 
 app.use(shopRoutes)
 
-
-
-
-
-
+app.use((req, res, next) => {
+  res.status(404).send('<h1>Page Not Found</h1>')
+})
 
 
 app.listen(5000)

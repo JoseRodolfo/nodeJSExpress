@@ -76,3 +76,9 @@ parses data coming that are type 'body', lie those coming from input forms, ther
 ********** On express.Router() ***********
 router is inherited with expressJS
 exports routes with module exports and import into app.js for cleaner code
+-to send an htmlas response use res.sendFile()
+
+********** On path nodejs core module ***********
+__dirname (tells path start inside this file [whichever file you type __dirname in])
+../ (means go up one level ex: if you have a file inside a folder, __dirname goes into its folder)
+then from there seperate commas and folders you want to go into in order with single quotes see shop.js for example line 8
