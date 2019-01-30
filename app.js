@@ -7,8 +7,9 @@ const shopRoutes = require('./routes/shop')
 
 const app = express();
 
-app.set('view engine', 'pug')
-app.set('views', 'views')
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'))
+
 
 
 // parses all requst/respones below
@@ -20,7 +21,8 @@ app.use('/admin', adminData.routes)
 app.use(shopRoutes)
 
 app.use((req, res, next) => {
-  res.render('404', {pageTitle: '404 Error'})
+  res.status(404).render('404', {pageTitle: '404 Error'})
 })
+
 
 app.listen(5000)
